@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Bem-vindo ao nosso cantinho</h2>
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <button onclick="entrar()">Entrar</button>
+    <p id="erro" class="erro"></p>
+  </div>
+  <script>
+    function entrar() {
+      var nome = document.getElementById('nome').value.toLowerCase();
+      if (nome === "davi" || nome === "isabelly") {
+        window.location.href = "main.html";
+      } else {
+        document.getElementById('erro').innerText = "Acesso restrito! Só Davi ou Isabelly.";
+      }
+    }
+  </script>
+</body>
+</html>

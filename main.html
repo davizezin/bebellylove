@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nosso Cantinho</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="section">
+    <h2>Nosso tempo juntos</h2>
+    <div class="contador">
+      <div><span id="anos">0</span> Anos</div>
+      <div><span id="meses">0</span> Meses</div>
+      <div><span id="dias">0</span> Dias</div>
+      <div><span id="horas">0</span> Horas</div>
+      <div><span id="minutos">0</span> Minutos</div>
+      <div><span id="segundos">0</span> Segundos</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Nossos Momentos</h2>
+    <div class="fotos">
+      <img src="https://drive.google.com/uc?export=view&id=12DEfICBx78pRyQtytOnaz_YYa92V9vWx">
+      <img src="https://drive.google.com/uc?export=view&id=1EiFnp3DaS8Tt1__vBKCHWtu3AWpLqqDx">
+      <img src="https://drive.google.com/uc?export=view&id=1Y3f4zsgzQ5CpK3mfyjsvpqk2Xlj8L80Z">
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Para você meu amor</h2>
+    <textarea placeholder="Escreva sua mensagem aqui..."></textarea>
+  </section>
+
+  <section class="section">
+    <button onclick="location.href='sonhos.html'">Planejar nossos sonhos</button>
+  </section>
+
+  <script>
+    const inicio = new Date("2024-10-26T20:27:00");
+    setInterval(() => {
+      const agora = new Date();
+      const diff = agora - inicio;
+      const anos = agora.getFullYear() - inicio.getFullYear();
+      const meses = agora.getMonth() - inicio.getMonth() + anos * 12;
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+      document.getElementById("anos").textContent = Math.floor(meses / 12);
+      document.getElementById("meses").textContent = meses % 12;
+      document.getElementById("dias").textContent = dias;
+      document.getElementById("horas").textContent = horas;
+      document.getElementById("minutos").textContent = minutos;
+      document.getElementById("segundos").textContent = segundos;
+    }, 1000);
+  </script>
+</body>
+</html>

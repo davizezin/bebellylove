@@ -1,0 +1,65 @@
+
+body {
+  background-color: #000;
+  color: #a259ff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+body.rosa {
+  background-color: pink;
+  color: #d63384;
+  background-image: url('https://www.transparenttextures.com/patterns/hearts.png');
+}
+
+.section {
+  margin: 40px 0;
+}
+
+.contador {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1.2em;
+}
+
+.fotos img {
+  max-width: 90%;
+  margin: 10px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #a259ff;
+}
+
+textarea {
+  width: 90%;
+  height: 150px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #a259ff;
+  resize: vertical;
+  font-size: 1em;
+  background-color: #111;
+  color: #fff;
+}
+
+button {
+  background-color: #a259ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.login-container {
+  margin-top: 20%;
+}
+
+.erro {
+  color: red;
+  margin-top: 10px;
+}
